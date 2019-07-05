@@ -1,0 +1,40 @@
+*{background:transparent !important;}
+body{color:#000;font:12pt/18pt Georgia, "Times New Roman", Times, serif;}
+#cabecera,#navegacion,#menu-curso,#saltar,#nav-secundaria,#ayuda,#h-tc,#tc,#contenido-secundario{display:none;}
+abbr{border-bottom:none;}
+pre{white-space:pre-wrap;border-bottom:0.5pt dotted #000;border-top:0.5pt dotted #000;}
+code{font:11pt/18pt "Lucida Console","Andale Mono","Courier New",Courier,monospace;}
+pre code{font-size:10pt;line-height:12pt;}
+samp,var{font:12pt/18pt "Lucida Console","Andale Mono","Courier New",Courier,monospace;}
+abbr[title]:after{content:" ("attr(title)")";}
+a{text-decoration:none;color:inherit;}
+a:after{content:" ["attr(href)"]";}
+b.ce{font-weight:normal;font-variant:small-caps;font-size:10pt;}
+p{margin:0;text-indent:1cm;}
+li{margin-bottom:12pt;}
+h1{font-weight:normal;font-size:18pt;text-align:center;border-bottom:0.5pt solid #000;padding-bottom:12pt;}
+h2{font-weight:bold;font-size:15pt;margin-top:24pt;margin-bottom:6pt;}
+h3{font-weight:normal;font-size:12pt;text-transform:uppercase;letter-spacing:2pt;margin-top:18pt;margin-bottom:4pt;}
+h1+p,h2+p,h3+p,ul+p,ol+p,table+p,dl+p,.nota-importante,li p:first-child,dd p:first-child,table+p,blockquote p:first-child{text-indent:0;}
+dt{font-weight:bold;margin-top:1em;}
+table{width:100%;border-collapse:separate;border-spacing:1px;empty-cells:hide;font-size:10pt;line-height:12pt;caption-side:bottom;border:0.5pt solid #000;border-bottom:none;margin:1em 0;page-break-inside:avoid;}
+table caption{border:0.5pt solid #000;border-top:none;padding:5pt 0 10pt;}
+table th,table td{vertical-align:top;padding:3pt;}
+table th{border-bottom:0.5pt solid #000;text-align:left;text-transform:uppercase;font-weight:normal;}
+table td{border-bottom:0.5pt dotted #000;}
+blockquote{font-size:10pt;line-height:16pt;margin-top:16pt;margin-bottom:16pt;}
+blockquote cite{display:block;text-align:right;font-style:normal;margin-top:16pt;}
+.nota-importante{font-size:10pt;line-height:12pt;border-top:0.5pt dotted;border-bottom:0.5pt dotted;padding:6pt 10px;margin:6pt 0;}
+.nota-importante:before{content:"Nota: ";font-weight:bold;}
+.volver:after,sup a:after,.ilustracion dt a:after{content:"";}
+.volver img{display:none;}
+.ilustracion{text-align:center;border:0.5pt solid #000;page-break-inside:avoid;}
+.ilustracion img{display:block;border:0.5pt solid #000;margin:0 auto;width:100%;height:auto;}
+.ilustracion dt{padding:10pt 10pt 0;margin-top:0;}
+.ilustracion dd{font-size:10pt;line-height:12pt;padding:5pt 0 10pt;}
+
+#pie{font-size:10pt;line-height:12pt;border-top:0.5pt solid #000;width:100%;margin-top:1cm;}
+#pie p{text-indent:0;}
+#pie strong{display:none;}
+#pie p:before{content:"Contenido sujeto a http://creativecommons.org/licenses/by/2.5/es/";font-size:8pt;color:#000;}
+#pie p:after{content:"CodexExempla.org";font-variant:small-caps;display:block;text-align:center;padding-top:10pt;color:#000;}

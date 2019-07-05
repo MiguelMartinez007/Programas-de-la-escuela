@@ -1,0 +1,88 @@
+<article>
+					<section>
+						<h2>Ley de Boyle</h2>
+						<div class="articleContenido">
+							<h3>Introducción</h3>
+							<div class="imagenDerecha">
+								<img src="images/Boyles_Law_animated.gif" alt="Imagen 1">
+							</div>
+							<p>La Ley de Boyle formulada independientemente por el físico  y químico irlandés Robert Boyle y el físico y botánico francés Edmen Mariotte, es una de las leyes de los gases que relaciona el volumen y la presión de una cierta cantidad de gas mantenida a temperatura constante. La ley dice que:</p> <br>
+							<p>“La presión ejercida por una fuerza física es inversamente proporcional al volumen de  una masa gaseosa, siempre y cuando su temperatura se mantenga constante”.</p> <br>
+							<p>A términos más sencillos:</p> <br>
+							<p>“A temperatura constante, el volumen de una masa fija de gas es inversamente proporcional a la presión que este ejerce”</p> <br>
+							<p>Si consideramos las dos situaciones de la figura, manteniendo constante la cantidad de gas y la temperatura, deberá cumplirse la relación:</p>
+							<p>P1P2 = V1V2</p>
+
+							<img src="images/mayorVolumenMenorPresion.png" class="def" alt="imagen 2">
+							<img src="images/menorVolumenMayorPresion.png" class="def" alt="Imagen 3">
+						</div>
+					</section>
+				</article>
+				<article class="pequeno">
+					<section>
+						<div class="articleContenido">
+							<h3>Donde:</h3>
+							<p>P1 = Presión inicial</p>
+							<p>P2 = Presión final</p>
+							<p>V1 = Volumen inicial</p>
+							<p>V2 = Volumen final</p>
+							<h3>Además si se despeja alguna incógnita se obtiene lo siguiente:</h3>
+							<p>P1 = ( P2  V2 ) / V1</p>
+							<p>V1 = ( P2 V2 ) / P1</p>
+						</div>
+					</section>
+				</article>
+				<article class="pequeno">
+					<section>
+						<div class="articleContenido">
+							<h3>Ejercicios según lo aprendido en la sección anterior</h3>
+							<p class="parrafoInformacion">¿Qué volumen de gas de hidrogeno a presión atmosférica se requiere para llenar un tanque de 5000m3 bajo una presión manométrica de 530kPa?</p>
+							<p>Considerando que:</p>
+							<p>Presión atmosférica = 101.3kPa</p>
+							<p>P1 = 101.3kPa</p>
+							<p>P2 = 101.3kPa + 530kPa = 631.3kPa</p>
+							<p>V1 = ?</p>
+							<p>V2 = 5000m3</p>
+							<div class="respuestasEjercicios">
+								<form class="problema1">
+									<input type="radio" id="234.54m3" name="respuesta" value="234.54m3" class="uno">
+									<label for="234.54m3">234.54m3</label>
+
+									<input type="radio" id="678.23cm3" name="respuesta" value="678.23cm3" class="dos">
+									<label for="678.23cm3">678.23cm3</label>
+
+									<input type="radio" id="678.243m3" name="respuesta" value="678.243m3" class="tres">
+									<label for="678.243m3">678.243m3</label>
+
+									<input type="radio" id="31159.921cm3" name="respuesta" value="31159.921cm3" class="cuatro">
+									<label for="31159.921cm3">31159.921cm3</label>
+
+									<div class="errorRespuesta"></div>
+									<input type="button" value="Comprobar" id="problema1" name="comprobar" onclick="comprobarRespuesta(id)">
+								</form>
+							</div>
+						</div>
+						<div class="articleContenido">
+							<h3>Segundo ejercicio</h3>
+							<p class="parrafoInformacion">¿Cuál de las siguientes formulas utilizarías considerando que ya tiene una presión en este momento para sacar la presión que tendrá un gas en 1 hora cuya volumen es despreciable?</p>
+							<div class="respuestasEjercicios">
+								<form class="problema2">
+									<input type="radio" id="P1V1=P2V2" name="respuesta" value="P1V1=P2V2" class="uno">
+									<label for="P1V1=P2V2">P1V1=P2V2</label>
+
+									<input type="radio" id="V1=(P2V2)/P1" name="respuesta" value="V1=(P2V2)/P1" class="dos">
+									<label for="V1=(P2V2)/P1">V1=(P2V2)/P1</label>
+
+									<input type="radio" id="V2=(P1V1)P2" name="respuesta" value="V2=(P1V1)P2" class="tres">
+									<label for="V2=(P1V1)P2">V2=(P1V1)P2</label>
+
+									<input type="radio" id="Ningunadelasanteriores" name="respuesta" value="Ningunadelasanteriores" class="cuatro">
+									<label for="Ningunadelasanteriores">Ninguna de las anteriores</label>
+
+									<div class="errorRespuesta"></div>
+									<input type="button" value="Comprobar" id="problema2" name="comprobar" onclick="comprobarRespuesta(id)">
+								</form>
+							</div>
+						</div>
+					</section>
+				</article>

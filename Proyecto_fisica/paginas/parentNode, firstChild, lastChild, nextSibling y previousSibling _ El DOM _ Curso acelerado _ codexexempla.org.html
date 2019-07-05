@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0045)http://codexexempla.org/curso/curso_4_3_b.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es"><head profile="http://dublincore.org/documents/dcq-html/"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="http://www.codexexempla.org/favicon.ico">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="DC.format" content="application/xhtml+xml">
+    <meta http-equiv="Content-Language" content="es">
+    <meta name="DC.language" content="es">
+    <meta name="robots" content="index, follow">
+    <meta name="DC.creator" content="Saúl González Fernández">
+    <meta name="DC.publisher" content="codexexempla.org">
+    <meta name="description" content="Explicación sobre el uso de parentNode, firstChild, lastChild, nextSibling y previousSibling a la hora de trabajar sobre el DOM.">
+    <meta name="DC.description" content="Explicación sobre el uso de parentNode, firstChild, lastChild, nextSibling y previousSibling a la hora de trabajar sobre el DOM.">
+    <meta name="keywords" content="parentNode javascript, firstChild javascript, lastChild javascript, nextSibling javascript, previousSibling javascript, seleccionar ramas documento javascript, nodos documento javascript">
+    <meta name="DC.date.created" content="2007-08-29">    
+    <meta name="DC.title" content="parentNode, firstChild, lastChild, nextSibling y previousSibling &lt; El DOM &lt; Curso acelerado &lt; codexexempla.org">
+    <title>parentNode, firstChild, lastChild, nextSibling y previousSibling &lt; El DOM &lt; Curso acelerado &lt; codexexempla.org</title>
+    <link rel="Contents" href="http://codexexempla.org/curso/curso_4_3.php">
+    <link rel="Start" href="http://codexexempla.org/curso/curso_4_3_a.php">
+    <link rel="Prev" href="http://codexexempla.org/curso/curso_4_3_a.php">
+    <link rel="Next" href="http://codexexempla.org/curso/curso_4_3_c.php">
+  
+    <link href="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/codexexempla.css" type="text/css" rel="stylesheet" media="screen">
+    <link type="text/css" rel="stylesheet" media="screen and (max-width:1024px)" href="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/1024.css">
+    <link href="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/imprimir.css" type="text/css" rel="stylesheet" media="print">
+    <link href="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/s.css" type="text/css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/codexexempla.js"></script>
+</head>
+<body>
+    <p id="saltar"><a href="http://codexexempla.org/curso/curso_4_3_b.php#contenido-principal" accesskey="0">Ir directamente al contenido de esta página</a></p>
+    <div id="cabecera">
+        <a href="http://codexexempla.org/index.php"><img src="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/logo.png" width="380" height="50" alt="codexexempla.org"></a>
+        <form id="buscador" action="http://codexexempla.org/resultados-busqueda.php" method="get">
+            <div><label for="tb">Buscar:</label><input type="text" name="tb" id="tb"><button type="submit">Buscar</button></div>
+        </form>
+    </div>
+    <div id="navegacion">
+        <ul>            <li><a href="http://codexexempla.org/index.php">Inicio</a></li>
+            <li id="actual"><a href="http://codexexempla.org/curso/index.php">Curso</a></li>
+            <li><a href="http://codexexempla.org/articulos/index.php">Artículos</a></li>
+            <li><a href="http://codexexempla.org/recursos/index.php">Recursos</a></li>
+            <li><a href="http://codexexempla.org/acerca/index.php">Acerca de</a></li>
+        </ul>
+    </div>
+    <div id="menu-curso">
+        <p><strong><a href="http://codexexempla.org/curso/curso_4_3_b.php#contenido-principal" accesskey="1">Contenidos <img src="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/expandir.png" alt=""></a><a href="http://codexexempla.org/curso/curso_4_3_b.php?mc=true" id="activar">Activar <img src="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/reactivar.png" alt=""></a><a href="http://codexexempla.org/curso/curso_4_3_b.php?mc=false" id="desactivar" class="estado">Desactivar <img src="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/error.png" alt=""></a></strong></p>
+ 
+        <ol>
+            <li>Breve introducción a <abbr title="«eXtensible Markup Language», Lenguaje de Marcado eXtensible">XML</abbr>
+                <ol>
+                    <li><a href="http://codexexempla.org/curso/curso_1_1.php">Un vistazo a <abbr title="«Standard Generalized Markup Language», Lenguaje Estándar de Marcado Generalizado">SGML</abbr></a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_1_2.php">Sintaxis de <abbr>XML</abbr></a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_1_3.php"><abbr>XML</abbr> bien formado y <abbr>XML</abbr> válido</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_1_4.php">Referencias de entidad</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_1_5.php">¿<abbr>XML</abbr> va a reemplazar al <abbr>HTML</abbr>?</a></li>
+                </ol>
+            </li>
+            <li>Capa de estructura del documento
+                <ol>
+                    <li><a href="http://codexexempla.org/curso/curso_2_1.php"><abbr title="«Document Type Definition», Definición de Tipo de Documento">DTD</abbr> y espacios de nombres</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_2_2.php">Diferencias entre <abbr>HTML</abbr> y <abbr title="«eXtensible HyperText Markup Language», Lenguaje de Marcado de HiperTexto eXtensible">XHTML</abbr></a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_2_3.php">Elementos y atributos de <abbr>XHTML</abbr> 1.1</a>
+                        <ol>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_a.php">Elementos estructurales</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_b.php">Elementos de texto</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_c.php">Elementos de lista</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_d.php">Elementos de vinculación</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_e.php">Elementos de objetos</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_f.php">Elementos de tabla</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_g.php">Elementos de formulario</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_3_h.php">Elementos de <i xml:lang="en">scripting</i></a></li>
+                        </ol>
+                    </li>
+                    <li><a href="http://codexexempla.org/curso/curso_2_4.php">Validación</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_2_5.php">Código semántico</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_2_6.php">Técnicas de accesibilidad</a>
+                        <ol>
+                            <li><a href="http://codexexempla.org/curso/curso_2_6_a.php">Técnicas generales</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_6_b.php">Imágenes accesibles</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_6_c.php">Tablas accesibles</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_2_6_d.php">Formularios accesibles</a></li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>Capa de presentación del documento
+                <ol>
+                    <li><a href="http://codexexempla.org/curso/curso_3_1.php"><abbr title="«Cascading Style Sheets», Hojas de Estilo en Cascada">CSS</abbr> 2.1: Introducción</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_2.php">Sintaxis de <abbr>CSS</abbr> 2.1: propiedades, declaraciones y reglas</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_3.php">Selectores y pseudoselectores</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_4.php">Relación de propiedades para medios visuales</a>
+                        <ol>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_a.php">Fuentes y texto</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_b.php">Cajas</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_c.php">Colores y fondos</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_d.php">Posición y flotado</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_e.php">Listas</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_f.php">Tablas</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_g.php">Contenido generado</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_3_4_h.php">Interfaz de usuario</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_5.php">Relación de propiedades para medios de impresión</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_6.php">Herencia y cascada</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_7.php">Más sobre posición y flotado</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_8.php">El modelo de caja del <abbr title="«World Wide Web Consortium», Consorcio de la Red Mundial">W3C</abbr> y el de Internet Explorer</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_9.php">Clarificación del uso de <code>id</code> y <code>class</code></a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_10.php">Sabios consejos para optimizar una hoja de estilo</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_11.php">Validación</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_3_12.php">Cuestiones de accesibilidad</a></li>
+                </ol>
+            </li>
+            <li>Capa de comportamiento del documento
+                <ol>
+                    <li><a href="http://codexexempla.org/curso/curso_4_1.php">Lenguajes de <i xml:lang="en">script</i> y JavaScript</a></li>
+                    <li><a href="http://codexexempla.org/curso/curso_4_2.php">Sintaxis básica de JavaScript</a>
+                        <ol>
+                            <li><a href="http://codexexempla.org/curso/curso_4_2_a.php">Variables</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_2_b.php">Operadores</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_2_c.php">Estructuras condicionales</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_2_d.php">Bucles</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_2_e.php">Funciones</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_2_f.php">Objetos nativos e incorporados</a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_2_g.php">Eventos</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="http://codexexempla.org/curso/curso_4_3.php">El <abbr title="«Document Object Model», Modelo de Objeto de Documento">DOM</abbr></a>
+                        <ol>
+                            <li><a href="http://codexexempla.org/curso/curso_4_3_a.php"><code>getElementById</code> y <code>getElementsByTagName</code></a></li>
+                            <li><a href="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org.html"><code>parentNode</code>, <code>firstChild</code>, <code>lastChild</code>, <code>nextSibling</code> y <code>previousSibling</code></a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_3_c.php"><code>createElement</code> y <code>createTextNode</code></a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_3_d.php"><code>appendChild</code>, <code>insertBefore</code>, <code>replaceChild</code>, <code>removeChild</code> y <code>cloneNode</code></a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_3_e.php"><code>addEventListener</code></a></li>
+                        </ol>
+                    </li>
+                    <li><a href="http://codexexempla.org/curso/curso_4_4.php">El <abbr title="«Browser Object Model», Modelo de Objeto de Navegador">BOM</abbr></a>
+                        <ol>
+                            <li><a href="http://codexexempla.org/curso/curso_4_4_a.php"><i xml:lang="en">Window</i> y <i xml:lang="en">Document</i></a></li>
+                            <li><a href="http://codexexempla.org/curso/curso_4_4_b.php"><i xml:lang="en">Navigator</i> y <i xml:lang="en">Screen</i></a></li>
+                        </ol>
+                    </li>
+                    <li><a href="http://codexexempla.org/curso/curso_4_5.php">Técnicas de accesibilidad: el JavaScript no obstrusivo</a></li>
+                </ol>
+            </li>
+        </ol>
+    </div>    <div id="contenido">
+        <div id="contenido-principal">
+            <h1><code>parentNode</code>, <code>firstChild</code>, <code>lastChild</code>, <code>nextSibling</code> y <code>previousSibling</code></h1>
+            <h2 id="h-tc">Tabla de contenidos</h2>
+            <ol id="tc">
+                <li><a href="http://codexexempla.org/curso/curso_4_3_b.php#intro">Introducción</a></li>
+                <li><a href="http://codexexempla.org/curso/curso_4_3_b.php#pN"><code>parentNode</code></a></li>
+                <li><a href="http://codexexempla.org/curso/curso_4_3_b.php#fCh"><code>firstChild</code></a></li>
+                <li><a href="http://codexexempla.org/curso/curso_4_3_b.php#lCh"><code>lastChild</code></a></li>
+                <li><a href="http://codexexempla.org/curso/curso_4_3_b.php#nS"><code>nextSibling</code></a></li>
+                <li><a href="http://codexexempla.org/curso/curso_4_3_b.php#pS"><code>previousSibling</code></a></li>
+            </ol>
+            <h2 id="intro">Introducción</h2>
+            <p>En la sección anterior hemos visto cómo seleccionar un elemento por medio de <a href="http://codexexempla.org/curso/curso_4_3_a.php#gEBI"><code>getElementById</code></a>. Ahora vamos a ver cómo seleccionar otros nodos según algunas de las relaciones de parentesco establecidas alrededor de tal elemento.</p>
+            <h2 id="pN"><code>parentNode</code></h2>
+            <p>Por medio de <code>parentNode</code> podemos seleccionar el elemento padre de otro elemento. Por ejemplo, si tenemos el siguiente código:</p>
+            <pre><code>
+    &lt;div&gt;
+        &lt;p id="introduccion"&gt;Párrafo introductorio.&lt;/p&gt;
+    &lt;/div&gt;
+            </code></pre>
+            <p>la siguiente línea de <i xml:lang="en">script</i>:</p>
+            <pre><code>
+    document.getElementById('introduccion').parentNode;
+            </code></pre>
+            <p>selecciona el elemento padre del elemento identificado como <code>introduccion</code>, en este caso el <code>div</code>.</p>
+            <h2 id="fCh"><code>firstChild</code></h2>
+            <p>Con <code>firstChild</code> lo que seleccionamos es el primer hijo de un elemento. Por desgracia, hay discrepancias entre los diversos navegadores sobre qué debe considerarse o no hijo de un nodo, por lo que esta propiedad en ocasiones complica demasiado un <i xml:lang="en">script</i>.</p>
+            <p>Supongamos el siguiente fragmento de código:</p>
+            <pre><code>
+    &lt;div id="contenido"&gt;
+        &lt;p&gt;Un párrafo.&lt;/p&gt;
+        &lt;p&gt;Otro párrafo.&lt;/p&gt;
+    &lt;/div&gt;
+            </code></pre>
+            <p>Parece, al menos intuitivamente, que <code>document.getElementById('contenido').firstChild</code> debería seleccionarnos el primer párrafo. Sin embargo, sólo ocurre así en Internet Explorer. El problema es que navegadores como Opera o Firefox interpretan también como hijos de un elemento los posibles espacios en blanco y saltos de línea que el elemento pueda contener. Estos, por tanto considerarían que el salto de línea entre el cierre del <code>div</code> y la apertura del primer <code>p</code> es el primer hijo.</p>
+            <p>Por ello, a menos que se quiera buscar alguna solución por medio de JavaScript, suelo aconsejar no emplear <code>firstChild</code> si se puede evitar, y limitarlo además a elementos cuyos contenidos sean en línea, que por lo general no contarán con saltos de línea en su interior. Por ejemplo, si el fragmento fuera el siguiente:</p>
+            <pre><code>
+    &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; La autoconservación está destinada al fracaso.&lt;/p&gt;
+            </code></pre>
+            <p><code>firstChild</code> devolvería de forma consistente el elemento <code>strong</code> en todos los navegadores actuales.</p>
+            <p class="nota-importante"><strong>Actualización del 8 de septiembre de 2007:</strong> He recogido una explicación más extensa sobre el problema y una posible solución en <a href="http://codexexempla.org/articulos/2007/nodos_texto_vacios.php">«<code>childNodes</code> y el problema de los nodos de texto vacíos»</a>.</p>
+            <h2 id="lCh"><code>lastChild</code></h2>
+            <p>La propiedad <code>lastChild</code> funciona exactamente como <code>firstChild</code>, pero se refiere el último de los hijos de un elemento. Se aplican, por tanto, las mismas indicaciones anteriores.</p>
+            <h2 id="nS"><code>nextSibling</code></h2>
+            <p>Gracias a <code>nextSibling</code>, lo que podemos seleccionar es el siguiente hermano de un elemento.</p>
+            <p>Se aplican las mismas limitaciones que para las dos propiedades anteriores.</p>
+            <h2 id="pS"><code>previousSibling</code></h2>
+            <p><code>previousSibling</code> funciona igual que <code>nextSibling</code>, pero selecciona el hermano anterior de un elemento.</p>
+            <p>Igual para sus limitaciones.</p>
+            <p>Veamos ahora <a href="http://codexexempla.org/curso/js/ejemplos_parentNode_y_demas.php" id="v-ejemplos">unos cuantos ejemplos de estas propiedades</a>.</p>
+            <div id="nav-secundaria">
+                <ul>
+                    <li id="anterior"><a href="http://codexexempla.org/curso/curso_4_3_a.php" title="getElementById y getElementsByTagName"><img src="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/anterior.png" width="16" height="16" alt="Anterior"></a></li>
+                    <li><a href="http://codexexempla.org/curso/temario.php">Curso: <abbr title="Tabla de Contenidos">TdC</abbr></a> &gt; <a href="http://codexexempla.org/curso/curso_4_3.php">El <abbr>DOM</abbr></a> &gt; <strong><code>parentNode</code>, <code>firstChild</code>, <code>lastChild</code>, <code>nextSibling</code>…</strong> <em>[57/64]</em></li>
+                    <li id="siguiente"><a href="http://codexexempla.org/curso/curso_4_3_c.php" title="createElement y createTextNode"><img src="./parentNode, firstChild, lastChild, nextSibling y previousSibling _ El DOM _ Curso acelerado _ codexexempla.org_files/siguiente.png" width="16" height="16" alt="Siguiente"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contenido-secundario">
+            <div id="contacto">
+                <h2>Contacto</h2>
+                <form id="f-contacto" method="post" action="http://codexexempla.org/curso/curso_4_3_b.php#f-contacto">
+                    <dl>
+                        <dd><label for="nombre">Nombre</label></dd>
+                        <dt><input name="nombre" id="nombre" type="text" value=""></dt>
+                        <dd><label for="correo">Correo electrónico <strong>[Necesario]</strong></label></dd>
+                        <dt><input name="correo" id="correo" type="text" value=""></dt>
+                        <dd><label for="mensaje">Mensaje <strong>[Necesario]</strong></label></dd>
+                        <dt><textarea name="mensaje" id="mensaje" cols="20" rows="7"></textarea><input type="hidden" name="control" value="true"></dt>
+                    </dl>
+                    <div id="boton"><button type="submit" id="b">Enviar</button></div>
+                    <p id="privacidad">En virtud de la Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal le informo de que los datos que proporcione no serán empleados para otro fin que el de responder a su mensaje. En especial, me comprometo a no cederlos a terceros ni a emplearlos para enviar información no solicitada.</p>
+                </form>
+            </div>
+            <div id="blog">
+                <h2>Del blog de Digital Icon</h2>
+                <ul>
+<li>
+            <h3><a href="http://digitalicon.es/blog/mapbox-alternativa-mapa-google/">MapBox: una alternativa al mapa de Google</a> <em>18/02/2013</em></h3>
+            <p>Probamos MapBox, una alternativa a Google Mpas a la hora de incluir un mapa en una página web.</p>
+        </li><li>
+            <h3><a href="http://digitalicon.es/blog/0000-00-00/">0000-00-00</a> <em>07/12/2012</em></h3>
+            <p>Un dato importante sobre el resultado de evaluar la fecha <var>0000-00-00</var> en PHP.</p>
+        </li><li>
+            <h3><a href="http://digitalicon.es/blog/responsive-images-sin-javascript-ni-php/">Responsive images sin JavaScript ni PHP</a> <em>05/11/2012</em></h3>
+            <p>Experimentamos con un método para servir imágenes de tamaños dependientes de la pantalla del usuario sin emplear JavaScript ni PHP.</p>
+        </li>                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="pie">
+        <p><strong>(<a href="http://creativecommons.org/licenses/by/2.5/es/"><abbr title="Creative Commons">cc</abbr></a>) <b class="ce">CodexExempla.org</b>, 2007–2015</strong> <span id="ayuda"><a href="http://codexexempla.org/ayuda/mapa.php">Mapa del sitio</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://codexexempla.org/ayuda/accesibilidad.php">AA</a></span></p>
+    </div>
+
+</body></html>

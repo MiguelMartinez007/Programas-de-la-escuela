@@ -1,0 +1,199 @@
+div.contenedor_Articulo
+{
+	width: 100%;
+	max-width: 1000px;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 20px;
+}
+div.contenedor_Articulo div.grap
+{
+	width: 100%;
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+div.contenedor_Articulo article
+{
+	padding: 5px;
+	float: left;
+	width: 100%;
+	font-size: 17px;
+}
+div.contenedor_Articulo article.pequeno
+{
+	width: 50%;
+}
+div.contenedor_Articulo article section
+{
+	background-color: white;
+	padding: 30px;
+	width: 100%;
+	border: solid 1px #5F99CC;
+	border-bottom: solid 5px #5F99CC;
+	border-radius: 1px;
+	overflow: hidden;
+	min-height: 250px;
+}
+div.contenedor_Articulo article section video
+{
+	width: 90%;
+	margin: auto;
+	height: auto;
+}
+div.contenedor_Articulo article section h2
+{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	float: left;
+}
+div.contenedor_Articulo article section div.articleContenido
+{
+	width: 100%;
+	overflow: hidden;
+}
+div.contenedor_Articulo article section div.articleContenido h3
+{
+	width: 100%;
+	margin: 10px;
+	margin-left: 0;
+	margin-top: 20px;
+	font-size: 18px;
+	float: left;
+}
+div.contenedor_Articulo article section div.articleContenido p
+{
+	width: 100%;
+	text-align: justify;
+	margin-top: 5px;
+	color: #022552;
+}
+div.contenedor_Articulo article section div.articleContenido p.parrafoInformacion
+{
+	margin-bottom: 10px;
+}
+div.contenedor_Articulo article section div.articleContenido div.imagenDerecha
+{
+	width: 100%;
+	max-width: 300px;
+	float: right;
+	overflow: hidden;
+}
+div.contenedor_Articulo article section div.articleContenido div.imagenDerecha>img
+{
+	width: 220px;
+	float: right;
+}
+div.contenedor_Articulo article section div.articleContenido>img
+{
+	float: none;
+	display: block;
+	width: 220px;
+	margin-right: 20px;
+	margin-top: 30px;
+}
+div.contenedor_Articulo article section div.articleContenido>img.def
+{
+	float: left;
+	display: inline-block;
+}
+
+/*Contendido del formulario de respuesta*/
+div.respuestasEjercicios
+{
+	width: 100%;
+	padding: 15px 0;
+}
+div.respuestasEjercicios form
+{
+	width: 100%;
+	overflow: hidden;
+}
+div.respuestasEjercicios form .errorRespuesta
+{
+	width: 100%;
+	overflow: hidden;
+	padding: 0 10px;
+	border-radius: 2px;
+	background-color: #E60000;
+	color: white;
+	margin-top: 10px;
+}
+div.respuestasEjercicios form input[type="button"]
+{
+	width: 100%;
+	max-width: 200px;
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #1460C1;
+	border: none;
+	font-size: 16px;
+	color: white;
+	border-radius: 1px;
+	border: solid 1px rgba(0,0,0,.1);
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+div.respuestasEjercicios form input[type="button"]:hover
+{
+	background-color: #E0E0E0;
+	color: #1460C1;
+	font-weight: bold;
+	cursor: pointer;
+}
+div.respuestasEjercicios form label
+{
+	display: block;
+	cursor: pointer;
+	color: #1460C1;
+	position: relative;
+	padding: 5px 15px 5px 51px;
+	font-size: 1em;
+	border-radius: 3px;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+div.respuestasEjercicios form label:hover
+{
+	background-color: rgba(20, 96, 193, 0.3);
+}
+div.respuestasEjercicios form label:before
+{
+	content: "";
+	display: inline-block;;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 15px;
+	border-radius: 50%;
+	border: solid 2px #1460C1;
+	background: none;
+}
+div.respuestasEjercicios form input[type="radio"]:checked + label:before
+{
+	display: none;
+}
+div.respuestasEjercicios form input[type="radio"]:checked + label
+{
+	padding: 5px 15px;
+	background: #1460C1;
+	border-radius: 2px;
+	color: white;
+}
+div.respuestasEjercicios form input[type="radio"]
+{
+	display: none;
+}
+
+/*Adaptacion*/
+@media screen and (max-width: 600px) {
+	div.contenedor_Articulo article.pequeno
+	{
+		width: 100%;
+	}
+}

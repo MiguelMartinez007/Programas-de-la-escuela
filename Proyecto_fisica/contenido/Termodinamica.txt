@@ -1,0 +1,89 @@
+<article>
+					<section>
+						<h2>Termodinámica</h2>
+						<div class="articleContenido">
+							<h3>Introducción</h3>
+							<div class="imagenDerecha">
+								<img src="images/220px-Triple_expansion_engine_animation.gif" alt="Imagen 1">
+							</div>
+							<p>La termodinámica como la rama de la física encargada del estudio de la interacción entre el calor y otras manifestaciones de la energía. La termodinámica ofrece un aparato formal aplicable únicamente a estados de equilibrio. Tales estados terminales de equilibrio son, por definición, independientes del tiempo, y todo el aparato formal de la termodinámica todas las leyes y variables termodinámicas se definen de tal modo que podría decirse que un sistema está en equilibrio si sus propiedades pueden describirse consistentemente empleando la teoría termodinámica.</p>
+
+							
+							<h3>Mención a la primera ley de la termodinámica</h3><br><br>
+							<p>También conocida como principio de conservación de la energía para la termodinámica, establece que si se realiza trabajo sobre un sistema o bien este intercambia calor con otro, o la energía interna del sistema cambiará.</p>
+
+							<img src="images/69451a7f1c586cd0a7c5857d2dc7b94e.png" class="def" alt="imagen 1">
+						</div>
+					</section>
+				</article>
+				<article>
+					<section>
+						<div class="articleContenido">
+							<h3>Video</h3>
+							<video width="640" height="360" controls autoplay preload>
+								<source src="videos/1eraLeyTermodinamica.mp4" type='video/mp4'/>
+							</video>
+						</div>
+					</section>
+				</article>
+				<article class="pequeno">
+					<section>
+						<div class="articleContenido">
+							<h3>Donde:</h3>
+							<img src="images/69451a7f1c586cd0a7c5857d2dc7b94e.png" class="def" alt="imagen 2"><br><br> <br><br> <br><br>
+							<img src="images/a741bc3d73c114ea4aa14774a6c3e5b9.png" class="def" alt="imagen 3"><br> <br><br> <br><br> <br><br>
+						</div>
+					</section>
+				</article>
+				<article class="pequeno">
+					<section>
+						<div class="articleContenido">
+							<h3>Ejercicios según lo aprendido en la sección anterior</h3>
+							<p class="parrafoInformacion">En un proceso químico industrial a un sistema se le proporciona 600J de calor y 200J de trabajo son realizados por dicho sistema. ¿Cuál es el incremento registrado en la energía interna de este sistema?</p>
+							<br>
+							<p>Calor = 600J</p>
+							<p>Trabajo = 200J</p>
+							<p>Energía interna = ?</p>
+							<div class="respuestasEjercicios">
+								<form class="problema3">
+									<input type="radio" id="420J" name="respuesta" value="420J" class="uno">
+									<label for="420J">420J</label>
+
+									<input type="radio" id="200J" name="respuesta" value="200J" class="dos">
+									<label for="200J">200J</label>
+
+									<input type="radio" id="400J" name="respuesta" value="400J" class="tres">
+									<label for="400J">400J</label>
+
+									<input type="radio" id="311J" name="respuesta" value="311J" class="cuatro">
+									<label for="311J">311J</label>
+
+									<div class="errorRespuesta"></div>
+									<input type="button" value="Comprobar" id="problema3" name="comprobar" onclick="comprobarRespuesta(id)">
+								</form>
+							</div>
+						</div>
+						<div class="articleContenido">
+							<h3>Segundo ejercicio</h3>
+							<p class="parrafoInformacion">En un proceso termodinámico la energía interna del sistema se incrementa en 500J. ¿Que formula e debería emplear para calcular cuánto trabajo fue realizado por el gas, si en el proceso fueron absorbidos 800J de calor?</p>
+							<div class="respuestasEjercicios">
+								<form class="problema4">
+									<input type="radio" id="U=Q-W" name="respuesta" value="U=Q-W" class="uno">
+									<label for="U=Q-W"><img src="images/a741bc3d73c114ea4aa14774a6c3e5b9.png" alt="a741bc3d73c114ea4aa14774a6c3e5b9" width="100" height="20"></label>
+
+									<input type="radio" id="Q=U-W" name="respuesta" value="Q=U-W" class="dos">
+									<label for="Q=U-W"><img src="images/a741bc3d73c114ea4aa14774a6c3e5b92.png" alt="a741bc3d73c114ea4aa14774a6c3e5b92" width="100" height="20"></label>
+
+									<input type="radio" id="Q=W-U" name="respuesta" value="Q=W-U" class="tres">
+									<label for="Q=W-U"><img src="images/a741bc3d73c114ea4aa14774a6c3e5b93.png" alt="a741bc3d73c114ea4aa14774a6c3e5b93" width="100" height="20"></label>
+
+									<input type="radio" id="U=Q+W" name="respuesta" value="U=Q+W" class="cuatro">
+									<label for="U=Q+W"><img src="images/a741bc3d73c114ea4aa14774a6c3e5b94.png" alt="a741bc3d73c114ea4aa14774a6c3e5b94" width="100" height="20"></label>
+
+									<div class="errorRespuesta"></div>
+									<input type="button" value="Comprobar" id="problema4" name="comprobar" onclick="comprobarRespuesta(id)">
+								</form>
+							</div>
+						</div>
+					</section>
+				</article>

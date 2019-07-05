@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>VIDA</title>
+	<script src="jquery.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<!-- <script type="text/javascript" src="Actualizar.js"></script> -->
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<div class="capa"></div>
+	<div class="contenedor">
+		<div class="titulo">
+			<h1>El juego de la vida</h1>
+		</div>
+		<div class="empezar">
+			<p id="empezar">Empezar</p>
+			<p id="configuracion">Configuración</p>
+			<p id="limpiarTablero">Limpiar tablero</p>
+		</div>
+		<div class="contenedorRecuadros"></div>
+		<!-- <div class="info"></div> -->
+	</div>
+
+	<div class="configuracion">
+		<p>Número de recuadros:</p>
+		<input type="text" name="numRecuadros" id="numRecuadros" value="40">
+		<!-- <p>Color:</p> -->
+
+		<p>Tamaño del cuadro:</p>
+		<input type="text" name="tamanoRecuadro" id="tamanoRecuadro" value="10">
+		<p>Curvatura:</p>
+		<input type="text" name="curvatura" id="curvatura" value="0">
+		<input type="button" name="guardar" id="guardar" value="Guardar">
+	</div>
+
+</body>
+</html>

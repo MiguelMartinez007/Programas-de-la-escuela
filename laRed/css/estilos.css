@@ -1,0 +1,858 @@
+* {
+  word-wrap: -webkit- break-word;
+  word-wrap: -moz- break-word;
+  word-wrap: -ms- break-word;
+  word-wrap: -o- break-word;
+  word-wrap: break-word;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Calibri, Arial, Verdana, 'Roboto', sans-serif;
+  transition: -webkit- all 0.25s;
+  transition: -moz- all 0.25s;
+  transition: -ms- all 0.25s;
+  transition: -o- all 0.25s;
+  transition: all 0.25s;
+}
+.contenedorInterior {
+  width: 100%;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+}
+.capaMagica {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  align-items: -webkit- stretch;
+  align-items: -moz- stretch;
+  align-items: -ms- stretch;
+  align-items: -o- stretch;
+  align-items: stretch;
+  transition: -webkit- none;
+  transition: -moz- none;
+  transition: -ms- none;
+  transition: -o- none;
+  transition: none;
+}
+body .contenedorLoginRegistro,
+body .contenedorPrincipal {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  align-items: -webkit- stretch;
+  align-items: -moz- stretch;
+  align-items: -ms- stretch;
+  align-items: -o- stretch;
+  align-items: stretch;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+body .contenedorLoginRegistro nav,
+body .contenedorPrincipal nav {
+  background-color: #000;
+  width: 100%;
+  overflow: hidden;
+  width: 0%;
+  max-width: 260px;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- column wrap;
+  flex-flow: -moz- column wrap;
+  flex-flow: -ms- column wrap;
+  flex-flow: -o- column wrap;
+  flex-flow: column wrap;
+  transition: -webkit- all 0.4s ease;
+  transition: -moz- all 0.4s ease;
+  transition: -ms- all 0.4s ease;
+  transition: -o- all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 100;
+}
+body .contenedorLoginRegistro nav .barraAnclamiento,
+body .contenedorPrincipal nav .barraAnclamiento {
+  width: 100%;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  justify-content: -webkit- space-between;
+  justify-content: -moz- space-between;
+  justify-content: -ms- space-between;
+  justify-content: -o- space-between;
+  justify-content: space-between;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+  height: 60px;
+  background-color: rgba(41,133,168,0.15);
+}
+body .contenedorLoginRegistro nav .barraAnclamiento h2,
+body .contenedorPrincipal nav .barraAnclamiento h2,
+body .contenedorLoginRegistro nav .barraAnclamiento p,
+body .contenedorPrincipal nav .barraAnclamiento p {
+  padding: 15px;
+}
+body .contenedorLoginRegistro nav .barraAnclamiento h2,
+body .contenedorPrincipal nav .barraAnclamiento h2 {
+  color: #2985a8;
+}
+body .contenedorLoginRegistro nav .barraAnclamiento p:hover,
+body .contenedorPrincipal nav .barraAnclamiento p:hover {
+  color: #d65b21;
+  cursor: pointer;
+}
+body .contenedorLoginRegistro nav .opciones,
+body .contenedorPrincipal nav .opciones {
+  width: 100%;
+}
+body .contenedorLoginRegistro nav .opciones .opcion,
+body .contenedorPrincipal nav .opciones .opcion {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+body .contenedorLoginRegistro nav .opciones .opcion:hover,
+body .contenedorPrincipal nav .opciones .opcion:hover {
+  background-color: rgba(41,133,168,0.5);
+  cursor: pointer;
+}
+body .contenedorLoginRegistro nav .opciones .opcion:hover p.seleccion,
+body .contenedorPrincipal nav .opciones .opcion:hover p.seleccion {
+  padding-left: 30px;
+}
+body .contenedorLoginRegistro nav .opciones .opcion p.seleccion,
+body .contenedorPrincipal nav .opciones .opcion p.seleccion {
+  font-size: 18px;
+  width: 100%;
+  padding: 14px 18px;
+}
+body .contenedorLoginRegistro .contenedorFantasma,
+body .contenedorPrincipal .contenedorFantasma {
+  background-color: rgba(0,0,0,0.95);
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+}
+body .contenedorLoginRegistro .contenedorFantasma header,
+body .contenedorPrincipal .contenedorFantasma header {
+  padding: 5px;
+  background-color: #000;
+  overflow: hidden;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  justify-content: -webkit- space-around;
+  justify-content: -moz- space-around;
+  justify-content: -ms- space-around;
+  justify-content: -o- space-around;
+  justify-content: space-around;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .menuInicio,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .menuInicio {
+  width: 60px;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  justify-content: -webkit- space-between;
+  justify-content: -moz- space-between;
+  justify-content: -ms- space-between;
+  justify-content: -o- space-between;
+  justify-content: space-between;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .menuInicio span,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .menuInicio span {
+  font-size: 23px;
+  color: #2985a8;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .menuInicio span:hover,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .menuInicio span:hover {
+  color: #fff;
+  cursor: pointer;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .busqueda,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .busqueda {
+  width: 70%;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  justify-content: -webkit- flex-end;
+  justify-content: -moz- flex-end;
+  justify-content: -ms- flex-end;
+  justify-content: -o- flex-end;
+  justify-content: flex-end;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .busqueda input,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .busqueda input {
+  border: none;
+  color: rgba(0,0,0,0.9);
+  padding: 7px;
+  font-size: 16px;
+  background-color: rgba(255,255,255,0.85);
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .busqueda input[type=text],
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .busqueda input[type=text] {
+  width: 300px;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .busqueda input[type=text]:focus,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .busqueda input[type=text]:focus {
+  background-color: #fff;
+  width: 100%;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .busqueda input[type=button],
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .busqueda input[type=button] {
+  min-width: 25px;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .busqueda input[type=button]:hover,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .busqueda input[type=button]:hover {
+  background-color: #2985a8;
+  color: #fff;
+  cursor: pointer;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .usuario,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .usuario {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- column wrap;
+  flex-flow: -moz- column wrap;
+  flex-flow: -ms- column wrap;
+  flex-flow: -o- column wrap;
+  flex-flow: column wrap;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+  width: 200px;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .usuario .inicialesEtc,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .usuario .inicialesEtc {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255,255,255,0.1);
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+  justify-content: -webkit- center;
+  justify-content: -moz- center;
+  justify-content: -ms- center;
+  justify-content: -o- center;
+  justify-content: center;
+  border-radius: 50%;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .usuario .inicialesEtc p,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .usuario .inicialesEtc p {
+  font-size: 20px;
+}
+body .contenedorLoginRegistro .contenedorFantasma header > .contenedorInterior .usuario p,
+body .contenedorPrincipal .contenedorFantasma header > .contenedorInterior .usuario p {
+  text-align: center;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat {
+  width: auto;
+  padding: 0 0 0 5px;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  flex-direction: -webkit- row-reverse;
+  flex-direction: -moz- row-reverse;
+  flex-direction: -ms- row-reverse;
+  flex-direction: -o- row-reverse;
+  flex-direction: row-reverse;
+  align-items: -webkit- flex-end;
+  align-items: -moz- flex-end;
+  align-items: -ms- flex-end;
+  align-items: -o- flex-end;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 330px;
+  margin-right: 18px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat {
+  width: 100%;
+  overflow: hidden;
+  width: 235px;
+  background-color: rgba(255,255,255,0.1);
+  margin-right: 3px;
+  height: 100%;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- column wrap;
+  flex-flow: -moz- column wrap;
+  flex-flow: -ms- column wrap;
+  flex-flow: -o- column wrap;
+  flex-flow: column wrap;
+  justify-content: -webkit- space-between;
+  justify-content: -moz- space-between;
+  justify-content: -ms- space-between;
+  justify-content: -o- space-between;
+  justify-content: space-between;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .tituloChat,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .tituloChat {
+  width: 100%;
+  overflow: hidden;
+  background-color: #2985a8;
+  padding: 5px 8px;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  justify-content: -webkit- space-between;
+  justify-content: -moz- space-between;
+  justify-content: -ms- space-between;
+  justify-content: -o- space-between;
+  justify-content: space-between;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .tituloChat:hover,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .tituloChat:hover {
+  cursor: pointer;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .tituloChat.hidden,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .tituloChat.hidden {
+  background-color: rgba(255,255,255,0.1);
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .VistaChat,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .VistaChat {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 10px;
+  overflow-y: scroll;
+  max-height: 260px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes {
+  width: 100%;
+  overflow: hidden;
+  margin: 10px 0;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row-reverse wrap;
+  flex-flow: -moz- row-reverse wrap;
+  flex-flow: -ms- row-reverse wrap;
+  flex-flow: -o- row-reverse wrap;
+  flex-flow: row-reverse wrap;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes .mensaje,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes .mensaje {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+  max-width: 170px;
+  background-color: #2985a8;
+  color: #000;
+  border-radius: 5px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes .mensaje p.date,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes .mensaje p.date {
+  font-size: 12px;
+  padding: 10px 0;
+  color: rgba(0,0,0,0.65);
+  text-align: right;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes.gris,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes.gris {
+  flex-flow: -webkit- row wrap;
+  flex-flow: -moz- row wrap;
+  flex-flow: -ms- row wrap;
+  flex-flow: -o- row wrap;
+  flex-flow: row wrap;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes.gris .mensaje,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes.gris .mensaje {
+  background-color: rgba(0,0,0,0.35);
+  color: #fff;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes.gris .mensaje p.date,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .VistaChat .contenedorMensajes.gris .mensaje p.date {
+  color: rgba(255,255,255,0.7);
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder input,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder input {
+  border: none;
+  color: rgba(0,0,0,0.9);
+  padding: 7px;
+  font-size: 16px;
+  background-color: rgba(255,255,255,0.85);
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=text],
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=text] {
+  width: 300px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=text]:focus,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=text]:focus {
+  background-color: #fff;
+  width: 100%;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=button],
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=button] {
+  min-width: 25px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=button]:hover,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=button]:hover {
+  background-color: #2985a8;
+  color: #fff;
+  cursor: pointer;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder input,
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder input {
+  width: 100%;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=text],
+body .contenedorPrincipal .contenedorFantasma .contenedorChat .ventanaChat .responder input[type=text] {
+  max-width: 170px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  height: auto;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  background-color: rgba(41,133,168,0.05);
+  z-index: 200;
+  max-width: 250px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .barraAnclamiento,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .barraAnclamiento {
+  width: 100%;
+  overflow: hidden;
+  padding: 5px 10px;
+  background-color: #2985a8;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+  justify-content: -webkit- space-between;
+  justify-content: -moz- space-between;
+  justify-content: -ms- space-between;
+  justify-content: -o- space-between;
+  justify-content: space-between;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .barraAnclamiento p:hover,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .barraAnclamiento p:hover {
+  color: rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos {
+  width: 100%;
+  overflow: hidden;
+  height: 75%;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos:hover,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos:hover {
+  overflow-y: scroll;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo {
+  width: 100%;
+  overflow: hidden;
+  padding: 7px;
+  border-bottom: solid 1px rgba(41,133,168,0.4);
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo:hover,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo:hover {
+  background-color: rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo .contImg,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo .contImg {
+  width: 100%;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo .contImg img,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo .contImg img {
+  line-height: 40px;
+  width: 100%;
+  min-height: 40px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo p,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo p {
+  padding: 0 5px;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo span,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo span {
+  color: #d65b21;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo span#activo,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo .barraAmigos .amigos .amigo span#activo {
+  color: #2985a8;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo article,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo article {
+  width: 100%;
+  overflow: hidden;
+  height: 1000px;
+  color: color #000;
+}
+body .contenedorLoginRegistro .contenedorFantasma .contenedorCuerpo article .relleno,
+body .contenedorPrincipal .contenedorFantasma .contenedorCuerpo article .relleno {
+  width: 100%;
+  overflow: hidden;
+  width: 0px;
+  float: left;
+  background-color: rgba(41,133,168,0.05);
+  height: 100%;
+  z-index: 100;
+}
+body .contenedorLoginRegistro {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  flex-flow: -webkit- column wrap;
+  flex-flow: -moz- column wrap;
+  flex-flow: -ms- column wrap;
+  flex-flow: -o- column wrap;
+  flex-flow: column wrap;
+  align-items: -webkit- center;
+  align-items: -moz- center;
+  align-items: -ms- center;
+  align-items: -o- center;
+  align-items: center;
+  justify-content: -webkit- center;
+  justify-content: -moz- center;
+  justify-content: -ms- center;
+  justify-content: -o- center;
+  justify-content: center;
+}
+body .contenedorLoginRegistro > .contenedorInterior {
+  max-width: 500px;
+}
+body .contenedorLoginRegistro > .contenedorInterior .titulo {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+body .contenedorLoginRegistro > .contenedorInterior .titulo h1 {
+  width: 100%;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  justify-content: -webkit- center;
+  justify-content: -moz- center;
+  justify-content: -ms- center;
+  justify-content: -o- center;
+  justify-content: center;
+}
+body .contenedorLoginRegistro > .contenedorInterior .titulo h1 p#blanco {
+  color: #fff;
+}
+body .contenedorLoginRegistro > .contenedorInterior .titulo h1 p#color {
+  color: #2985a8;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-repeat;
+  flex-flow: -moz- row no-repeat;
+  flex-flow: -ms- row no-repeat;
+  flex-flow: -o- row no-repeat;
+  flex-flow: row no-repeat;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.1);
+  border: solid 1px rgba(255,255,255,0.1);
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form #input {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row no-wrap;
+  flex-flow: -moz- row no-wrap;
+  flex-flow: -ms- row no-wrap;
+  flex-flow: -o- row no-wrap;
+  flex-flow: row no-wrap;
+  align-items: -webkit- stretch;
+  align-items: -moz- stretch;
+  align-items: -ms- stretch;
+  align-items: -o- stretch;
+  align-items: stretch;
+  margin-bottom: 15px;
+  height: 40px;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form #input input {
+  padding: 10px;
+  border: none;
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  height: auto;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form #input input:focus {
+  background-color: rgba(255,255,255,0.25);
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form #input .icon {
+  background-color: rgba(41,133,168,0.8);
+  height: auto;
+  padding: 10px;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form input[type=button],
+body .contenedorLoginRegistro > .contenedorInterior .formularios form input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  background-color: #2985a8;
+  color: #fff;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form input[type=button]:hover,
+body .contenedorLoginRegistro > .contenedorInterior .formularios form input[type=submit]:hover {
+  background-color: #d65b21;
+  cursor: pointer;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form #mas {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms- flex;
+  display: -o- flex;
+  display: flex;
+  flex-flow: -webkit- row-reverse wrap;
+  flex-flow: -moz- row-reverse wrap;
+  flex-flow: -ms- row-reverse wrap;
+  flex-flow: -o- row-reverse wrap;
+  flex-flow: row-reverse wrap;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form #mas p {
+  color: rgba(255,255,255,0.6);
+  text-align: right;
+  text-decoration: underline;
+  max-width: 100px;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form #mas p:hover {
+  cursor: pointer;
+  color: #d65b21;
+}
+body .contenedorLoginRegistro > .contenedorInterior .formularios form.registro {
+  display: none;
+  opacity: 0;
+}
+.mensajeInformativo {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  background-color: rgba(41,133,168,0.5);
+  max-height: 40px;
+  color: #fff;
+}
+.mensajeInformativo p {
+  color: rgba(255,255,255,0.9);
+  width: 100%;
+  line-height: 40px;
+  font-size: 20px;
+}

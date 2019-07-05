@@ -1,0 +1,6 @@
+code{font-size:1.25em !important;}
+var,samp{font-size:1.35em !important;}
+#navegacion ul li:last-child a{margin-right:-3px;}
+#nav-secundaria #anterior a,#nav-secundaria #siguiente a{padding-bottom:12px !important;}
+#nav-secundaria #siguiente a{margin-right:-2px !important;}
+#b{padding-top:8px !important;padding-bottom:8px !important;}

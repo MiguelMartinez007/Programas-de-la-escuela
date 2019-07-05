@@ -1,0 +1,41 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body
+{
+	background-color: #ccc;
+}
+a
+{
+	text-decoration: none;
+	color: white;
+}
+div.contenedor
+{
+	width: 100%;
+	max-width: 1600px;
+	height: auto;
+	overflow: hidden;
+}
+
+footer
+{
+	color: white;
+	margin-top: 50px;
+}
+footer h5
+{
+	opacity: .8;
+	float: left;
+}
+
+/*#resaltarNodo
+{
+	padding: 5px;
+	background-color: rgba(254, 255, 0, 0.37);
+}*/

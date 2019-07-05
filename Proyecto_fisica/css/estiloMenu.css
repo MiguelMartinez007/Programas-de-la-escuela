@@ -1,0 +1,108 @@
+/*	Parte del menu	*/
+div.contenedor nav
+{
+	width: 100%;
+	max-width: 350px;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	background-color: #091117;
+	border-right: solid 1px black;
+	box-shadow: 0 0 1px white,0 0 10px black;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+}
+div.contenedor nav div.precentacion
+{
+	width: 100%;
+	height: auto;
+	padding: 10px 20px;
+	border-bottom: solid 1px #232323;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+div.contenedor nav div.precentacion div.imagenUsuario
+{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 10px;
+	background-image: url(../images/69.jpg);
+}
+div.contenedor nav div.precentacion p
+{
+	line-height: 50px;
+	float: left;
+	color: white;
+}
+div.contenedor nav div.menu
+{
+	width: 100%;
+	overflow: hidden;
+}
+div.contenedor nav div.menu div.tema
+{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+div.contenedor nav div.menu div.tema>p
+{
+	line-height: 30px;
+	text-align: center;
+	color: white;
+	padding: 13px;
+	font-size: 18px;
+	/*opacity: .9;*/
+	background-color: #127DD4;
+	font-weight: bold;
+	border-bottom: solid 1px rgba(255,255,255,0.2);
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+div.contenedor nav div.menu div.tema>p a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+div.contenedor nav div.menu div.tema>p:hover
+{
+	background-color: rgba(18, 125, 212, 0.7);
+}
+div.contenedor nav div.menu div.tema>p:hover,
+article div.btn_Ejercicios div.botonEjercicios:hover
+{
+	opacity: 1;
+	cursor: pointer;
+	font-size: 23px;
+}
+div.contenedor nav div.menu div.tema div.capitulos
+{
+	width: 100%;
+	overflow: hidden;
+}
+div.contenedor nav div.menu div.tema div.capitulos p
+{
+	width: 100%;
+	height: 0px;
+	float: left;
+	background-color: rgba(255,255,255,0.1);
+	padding: 0px;
+	border-bottom: none;
+	color: #ccc;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	/*display: none;*/
+}
+div.contenedor nav div.menu div.tema div.capitulos p:hover
+{
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+	padding-left: 15px;
+	font-size: 20px;
+}

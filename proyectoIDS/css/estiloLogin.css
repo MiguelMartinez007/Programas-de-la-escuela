@@ -1,0 +1,266 @@
+div.contenedorFormularioLogin
+{
+	width: 100%;
+	padding: 5px 15px 15px 15px;
+	background-color: #127DD4;
+	box-shadow: 0 0 3px gray;
+	color: #efefef;
+	height: auto;
+	overflow: hidden;
+}
+.errorLogin
+{
+	width: 100%;
+	background-color: #CC1C1C;
+	overflow: hidden;
+	float: left;
+}
+.errorLogin p
+{
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	display: block;
+}
+div.contenedorFormularioLogin form
+{
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+	overflow: hidden;
+}
+div.contenedorFormularioLogin form input
+{
+	margin-top: 10px;
+}
+div.contenedorFormularioLogin form input[type="text"],
+div.contenedorFormularioLogin form input[type="password"]
+{
+	width: 100%;
+	max-width: 200px;
+	float: left;
+	margin-right: 30px;
+	border: none;
+	padding: 10px;
+	background: none;
+	color: white;
+	outline: none;
+	border-bottom: solid 2px rgba(255,255,255,.6);
+	font-size: 16px;
+	-webkit-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+}
+div.contenedorFormularioLogin form input[type="text"]:hover,
+div.contenedorFormularioLogin form input[type="password"]:hover,
+div.contenedorFormularioLogin form input[type="text"]:focus,
+div.contenedorFormularioLogin form input[type="password"]:focus
+{
+	border-bottom: solid 2px white;
+}
+div.contenedorFormularioLogin form input[type="submit"]
+{
+	width: 100%;
+	max-width: 150px;
+	padding: 10px;
+	background-color: #F1F1F1;
+	border: none;
+	font-size: 16px;
+	color: #1460C1;
+	border-radius: 1px;
+	border: solid 1px rgba(0,0,0,.1);
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+div.contenedorFormularioLogin form input[type="submit"]:hover
+{
+	background-color: #1460C1;
+	color: white;
+	cursor: pointer;
+}
+div.contenedorFormulario
+{
+	width: 100%;
+	max-width: 450px;
+	margin: auto;
+	margin-top: 30px;
+	height: auto;
+	padding: 50px;
+	background-color: white;
+	box-shadow: 0 0 3px gray;
+	color: #efefef;
+}
+form.formulario
+{
+	width: 100%;
+	margin: auto;
+}
+form.formulario div.inputGroup
+{
+	position: relative;
+	margin-bottom: 32px;
+}
+form.formulario div.inputGroup input[type="text"],
+form.formulario div.inputGroup input[type="password"]
+{
+	font-size: 16px;
+	color: #1460C1;
+	width: 100%;
+	outline: none;
+	padding: 15px;
+	background: none;
+	border: none;
+	border-bottom: solid 2px #A3CFF5;
+}
+form.formulario div.inputGroup input[type="text"]:focus,
+form.formulario div.inputGroup input[type="text"]:active,
+form.formulario div.inputGroup input[type="password"]:focus,
+form.formulario div.inputGroup input[type="password"]:active
+{
+	outline: none;
+	border-bottom: solid 2px #1460C1;
+}
+form.formulario div.inputGroup.error input
+{
+	border-bottom: solid 2px #E60000;
+}
+form.formulario div.inputGroup.error label
+{
+	color: #E60000;
+}
+
+form.formulario div.inputGroup label
+{
+	color: #1460C1;
+}
+form.formulario div.inputGroup label.label
+{
+	position: absolute;
+	top: 16px;
+	left: 0px;
+	font-size: 16px;
+	line-height: 16px;
+	margin-left: 16px;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+form.formulario div.inputGroup label.label.active
+{
+	top: -12px;
+	font-size: 12px;
+	color: gray;
+	line-height: 12px;
+}
+form.formulario div.inputGroup.checkbox label,
+form.formulario div.inputGroup.radio label
+{
+	display: inline-block;
+	cursor: pointer;
+	color: #1460C1;
+	position: relative;
+	padding: 5px 15px 5px 51px;
+	font-size: 1em;
+	border-radius: 3px;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+form.formulario div.inputGroup.checkbox label p
+{
+	display: none;
+}
+form.formulario div.inputGroup.checkbox label:hover,
+form.formulario div.inputGroup.radio label:hover
+{
+	/*background-color: rgba(0,0,0,0.5);*/
+	background-color: rgba(20, 96, 193, 0.3);
+}
+form.formulario div.inputGroup.checkbox label:before,
+form.formulario div.inputGroup.radio label:before
+{
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 15px;
+	border-radius: 50%;
+	border: solid 2px #1460C1;
+	background: none;
+}
+form.formulario div.inputGroup.checkbox.error label,
+form.formulario div.inputGroup.radio.error label
+{
+	color: #E60000;
+}
+form.formulario div.inputGroup.checkbox.error label:hover,
+form.formulario div.inputGroup.radio.error label:hover
+{
+	background: rgba(230, 0, 0, 0.3);
+}
+form.formulario div.inputGroup.checkbox.error label:before,
+form.formulario div.inputGroup.radio.error label:before
+{
+	border: solid 2px #E60000;
+}
+form.formulario div.inputGroup.radio input[type="radio"]
+{
+	display: none;
+}
+form.formulario div.inputGroup.radio input[type="radio"]:checked + label:before
+{
+	display: none;
+}
+form.formulario div.inputGroup.radio input[type="radio"]:checked + label
+{
+	padding: 5px 15px;
+	background: #2E4053;
+	border-radius: 2px;
+	color: white;
+}
+form.formulario div.inputGroup.checkbox input[type="checkbox"]:checked + label p
+{
+	display: block;
+}
+
+form.formulario div.inputGroup.checkbox label:before
+{
+	border-radius: 3px;
+}
+form.formulario div.inputGroup.checkbox input[type="checkbox"]
+{
+	display: none;
+}
+form.formulario div.inputGroup.checkbox input[type="checkbox"]:checked + label:before
+{
+	display: none;
+}
+form.formulario div.inputGroup.checkbox input[type="checkbox"]:checked +  label
+{
+	padding: 5px 15px;
+	background: #1460C1;
+	color: white;
+}
+form.formulario input[type="submit"]
+{
+	width: 100%;
+	padding: 15px;
+	color: white;
+	background-color: #1460C1;
+	border: solid 1px #104A94;
+	border-radius: 1px;
+	display: inline-block;
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+form.formulario input[type="submit"]:hover
+{
+	cursor: pointer;
+	background-color: #104A94;
+}

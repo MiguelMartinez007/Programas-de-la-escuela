@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Reticula</title>
+	<link rel="stylesheet" type="text/css" href="css/estiloLogin.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jLogin.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- <script type="text/javascript" src="js/Actualizar.js"></script> -->
+</head>
+<body>
+	<div class="capaMagica" id="cajaMagica">
+		<div class="contenedorMil" id="formulario">
+			<div class="cerrar"><span class="icon-close"></span></div>
+			<form action="#" method="POST" class="formulario" name="formulario_registro">
+				<div class="inputGroup">
+					<input type="text" id="NoControl" name="NoControl">
+					<label class="label" for="NoControl">No. de control:</label>
+				</div>
+				<div class="inputGroup">
+					<input type="password" id="pass" name="pass">
+					<label class="label" for="pass">Contraseña:</label>
+				</div>
+				<div class="inputGroup">
+					<input type="password" id="pass2" name="pass2">
+					<label class="label" for="pass2">Repetir contraseña:</label>
+				</div>
+				<input type="button" class="animacion3 validarInputs btn_azul" id="registrar" name="registrar" value="Registrarme">
+			</form>
+			<form action="#" method="post" class="formulario actualizarInfoMateria">
+				<div class="inputGroup">
+					<input type="text" id="nombreMateria" name="nombreMateria">
+					<label class="label" for="nombreMateria">Nobre de la materia:</label>
+				</div>
+				<div class="inputGroup">
+					<input type="text" id="NoControl" name="nombreMateria">
+					<label class="label" for="NoControl">No. de contro:</label>
+				</div>
+				<div class="inputGroup radio">
+					<input type="radio" id="aprobada" name="estado" value="Aprobada">
+					<label for="aprobada">Aprobada</label>
+
+					<input type="radio" id="enCurso" name="estado" value="enCurso">
+					<label for="enCurso">En curso</label>
+
+					<input type="radio" id="reprobada" name="estado" value="Reprobada">
+					<label for="reprobada">Reprobada</label>
+
+					<input type="radio" id="recursando" name="estado" value="Reprobada">
+					<label for="recursando">Recursando</label>
+				</div>
+				<input type="button" name="actualizarMeterias" id="actualizarMeterias" value="Actualizar materia" class="btn_azul">
+			</form>
+
+		</div>
+	</div>
+	<div class="contenedorFlotante">
+		<header>
+			<div class="contenedorMil">
+				<div class="informacion">
+					<img src="img/logo/logo.jpg" alt="Logo ITESI" class="logo" width="170">
+					<p class="btn_verde" id="entrarCuenta">Entrar</p>
+				</div>
+			</div>
+		</header>
+
+		<div class="contenedorMil">
+			<article>
+				<section>
+					<h1>Bienvenido a tu reticula</h1>
+					<p>La forma mas sencilla de conectarte con tus materias para mejorar el desempeño y conectarte con tus tutores.</p>
+				</section>
+				<div id="linea"></div>
+				<section>
+					<h3>Crea una cuenta gratuita</h3>
+				</section>
+				<section>
+					<p class="btn_verde" id="creaCuenta">Crear cuenta</p>
+				</section>
+			</article>
+		</div>
+	</div>
+
+	<div class="contenedor">
+		<header class="headerPrincipal">
+			<div class="contenedorMil">
+				<div class="informacion">
+					<img src="img/logo/logo.jpg" alt="Logo ITESI" class="logo" width="170">
+					<h1>Bienvenido administrador</h1>
+				</div>
+			</div>
+		</header>
+		<div class="barraBuscar">
+			<div class="contenedorMil">
+				<form action="#" method="POST" name="buscador" class="buscador" >
+					<div class="inputGroup">
+						<input type="text" placeholder="Buscar alumno">
+						<input type="button" value="Buscar" class="btn_azul">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="contenedorMil">
+			<article class="informacion">
+				<section class="indicadores">
+					<h2>Indicadores</h2>
+					<div class="indicador">
+						<div>
+							<div class="cuadrado V"></div>
+							<p>Aprobada</p>
+						</div>
+						<div>
+							<div class="cuadrado A"></div>
+							<p>En curso</p>
+						</div>
+						<div>
+							<div class="cuadrado R"></div>
+							<p>Reprobada</p>
+						</div>
+						<div>
+							<div class="cuadrado M"></div>
+							<p>Recursando</p>
+						</div>
+					</div>
+				</section>
+				<section class="infoAlumno">
+					<div class="foto">
+						<img src="img/alumno/TS14110003.png" alt="Miguel Angel MartinezPuga" width="200">
+						<p id="NoControl">TS14110003</p>
+					</div>
+					<div class="datos">
+						<p class="nombre">Nombre: </p>
+						<p class="semestre">Semestre: </p>
+						<p class="carrera">Carrera: </p>
+						<p class="edad">Edad: </p>
+						<p class="sexo">Sexo: </p>
+					</div>
+				</section>
+			</article>
+
+			<article class="tablaReticula">
+				<div class="headerReticula">
+					<h3>Reticula</h3>
+				</div>
+				<section class="tabla">
+					<div class="descripcionMateria">
+						<p class="nivel">1° Semestre</p>
+						<div class="materias materiasCerradas">
+							<div class="materia V edit">
+								<h4>Matematicas discretas</h4>
+								<p class="control">CC16</p>
+								<p class="control">Horas teoria - practiva - creditos</p>
+								<p class="control">clave oficial del programa</p>
+							</div>
+							<div class="materia M edit">
+								<h4>Matematicas discretas2</h4>
+								<p class="control">CS90M45</p>
+							</div>
+							<div class="materia A edit">
+								<h4>Matematicas discretas3</h4>
+								<p class="control">CS90M45</p>
+							</div>
+							<div class="materia V edit">
+								<h4>Matematicas discretas4</h4>
+								<p class="control">CS90M45</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+		</div>
+	</div>
+</body>
+</html>

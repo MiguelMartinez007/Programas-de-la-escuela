@@ -1,0 +1,486 @@
+// Colores
+color1 = #2985a8
+color2 = #d65b21
+
+
+
+box-sizing(n)
+	-webkit-box-sizing n
+	-moz-box-sizing n
+	box-sizing n
+flex(n)
+	display -webkit- n
+	display -moz- n
+	display -ms- n
+	display -o- n
+	display n
+flex-flow(n)
+	flex-flow -webkit- n
+	flex-flow -moz- n
+	flex-flow -ms- n
+	flex-flow -o- n
+	flex-flow n
+align-items(n)
+	align-items -webkit- n
+	align-items -moz- n
+	align-items -ms- n
+	align-items -o- n
+	align-items n
+justify-content(n)
+	justify-content -webkit- n
+	justify-content -moz- n
+	justify-content -ms- n
+	justify-content -o- n
+	justify-content n
+transition(n)
+	transition -webkit- n
+	transition -moz- n
+	transition -ms- n
+	transition -o- n
+	transition n
+word-wrap(n)
+	word-wrap -webkit- n
+	word-wrap -moz- n
+	word-wrap -ms- n
+	word-wrap -o- n
+	word-wrap n
+flex-direction(n)
+	flex-direction -webkit- n
+	flex-direction -moz- n
+	flex-direction -ms- n
+	flex-direction -o- n
+	flex-direction n
+
+valoresDefault()
+	width 100%
+	overflow hidden
+
+imagenesFondo()
+	background-size 100% 100%
+	background-attachment fixed
+	background-repeat no-repeat
+	
+inputs()
+	input
+		border none
+		color rgba(black, 0.9)
+		padding 7px
+		font-size 16px
+		background-color rgba(white, .85)
+	input[type=text]
+		width 300px
+		&:focus
+			background-color white
+			width 100%
+	input[type=button]
+		min-width 25px
+		&:hover
+			background-color color1
+			color white
+			cursor pointer
+
+
+// Efectos globales 
+*
+	word-wrap(break-word)
+	padding 0
+	margin 0
+	box-sizing(border-box)
+	font-family Calibri, Arial, Verdana, 'Roboto', sans-serif
+	transition(all .25s)
+
+// Estilos globales de cualquier div contenedorInterior 
+.contenedorInterior
+	valoresDefault()
+	max-width 1000px
+	margin auto
+	
+
+// Estilos de la capa magica 
+.capaMagica
+	position absolute
+	z-index 10
+	top 0
+	left 0
+	background-color rgba(black, .3)
+	width 100%
+	height 100%
+	display none
+
+
+
+// Estilos para el body
+body
+	background-color black
+	color white
+	flex(flex)
+	flex-flow(row no-wrap)
+	align-items(stretch)
+	transition(none)
+
+	// Div contenedor de todo el documento 
+	.contenedorLoginRegistro,.contenedorPrincipal
+		valoresDefault()
+		flex(flex)
+		flex-flow(row no-wrap)
+		align-items(stretch)
+		position fixed
+		height 100%
+		top 0
+		left 0
+		background-color white
+		// &:hover
+		// 	nav
+		// 		max-width 300px
+		
+		nav
+			background-color black
+			valoresDefault()
+			width 0%
+			max-width 260px
+			flex(flex)
+			flex-flow(column wrap)
+			transition(all .4s ease)
+			z-index 100
+			&:hover
+				// overflow-y scroll
+			.barraAnclamiento
+				width 100%
+				flex(flex)
+				flex-flow(row no-wrap)
+				justify-content(space-between)
+				align-items(center)
+				height 60px
+				background-color rgba(color1, 0.15)
+				h2, p
+					padding 15px
+				h2
+					color color1
+				p
+					&:hover
+						color color2
+						cursor pointer
+
+			.opciones
+				// flex(flex)
+				width 100%
+				// flex-flow(row wrap)
+				.opcion
+					valoresDefault()
+					height auto
+					border-bottom solid 1px rgba(white,.1)
+					&:hover
+						background-color rgba(color1, .5)
+						cursor pointer
+						p.seleccion
+							padding-left 30px
+					p.seleccion
+						font-size 18px
+						width 100%
+						// text-align center
+						padding 14px 18px
+			
+
+		.contenedorFantasma
+			background-color rgba(black, .95)
+			position relative
+			width 100%
+			height auto
+			overflow-y scroll
+			header
+				padding 5px
+				background-color black
+				overflow hidden
+				> .contenedorInterior
+					flex(flex)
+					flex-flow(row no-wrap)
+					justify-content(space-around)
+					align-items(center)
+					
+					// Estilos del llamado menu e inicio
+					.menuInicio
+						width 60px
+						flex(flex)
+						flex-flow(row no-wrap)
+						justify-content(space-between)
+						span
+							font-size 23px
+							color color1
+							&:hover
+								color white
+								cursor pointer
+								
+					// Diceño de control de busqueda
+					.busqueda
+						width 70%
+						flex(flex)
+						flex-flow(row no-wrap)
+						justify-content(flex-end)
+						inputs()
+					
+					// Estilos de la seccion del usuario
+					.usuario
+						flex(flex)
+						flex-flow(column wrap)
+						align-items(center)
+						width 200px
+						.inicialesEtc
+							width 60px
+							height 60px
+							background-color rgba(white, .1)
+							flex(flex)
+							align-items(center)
+							justify-content(center)
+							border-radius 50%
+							p
+								font-size 20px
+						p
+							text-align center
+			.contenedorChat
+				width auto
+				padding 0 0 0 5px
+				flex(flex)
+				flex-flow(row no-wrap)
+				flex-direction(row-reverse)
+				align-items(flex-end)
+				position fixed
+				bottom 0
+				right 0
+				height 330px
+				margin-right 18px
+				// background-color black
+				.ventanaChat
+					valoresDefault()
+					width 235px
+					background-color rgba(white, .1)
+					margin-right 3px
+					height 100%
+					flex(flex)
+					flex-flow(column wrap)
+					justify-content(space-between)
+					.tituloChat
+						valoresDefault()
+						background-color color1
+						padding 5px 8px
+						flex(flex)
+						flex-flow(row no-wrap)
+						justify-content(space-between)
+						align-items(center)
+						&:hover
+							cursor pointer
+					
+					.tituloChat.hidden
+						background-color rgba(white, .1)
+					
+					.VistaChat
+						valoresDefault()
+						padding 0 10px
+						overflow-y scroll
+						max-height 260px
+						.contenedorMensajes
+							valoresDefault()
+							margin 10px 0
+							flex(flex)
+							flex-flow(row-reverse wrap)
+							
+							.mensaje
+								padding 10px
+								valoresDefault()
+								max-width 170px
+								background-color color1
+								color black
+								border-radius 5px
+								p.date
+									font-size 12px
+									padding 10px 0
+									color rgba(black, .65)
+									text-align right
+						.contenedorMensajes.gris
+							flex-flow(row wrap)
+							.mensaje
+								background-color rgba(black, .35)
+								color white
+								p.date
+									color rgba(white, .7)
+					
+					.responder
+						valoresDefault()
+						flex(flex)
+						flex-flow(row no-wrap)
+						inputs()
+						input
+							width 100%
+						input[type=text]
+							max-width 170px
+			
+			.contenedorCuerpo
+				valoresDefault()
+				flex(flex)
+				flex-flow(row no-wrap)
+				height auto
+				// background-color red
+				.barraAmigos
+					valoresDefault()
+					position fixed
+					width 0px
+					height 100%
+					background-color rgba(color1, .05)
+					z-index 200
+					max-width 250px
+					.barraAnclamiento
+						valoresDefault()
+						padding 5px 10px
+						background-color color1
+						flex(flex)
+						flex-flow(row no-wrap)
+						align-items(center)
+						justify-content(space-between)
+						p
+							&:hover
+								color rgba(black, .9)
+								cursor pointer
+					.amigos
+						valoresDefault()
+						height 75%
+						&:hover
+							overflow-y scroll
+						.amigo
+							valoresDefault()
+							padding 7px
+							border-bottom solid 1px rgba(color1, .4)
+							flex(flex)
+							flex-flow(row no-wrap)
+							align-items(center)
+							&:hover
+								background-color rgba(white, .2)
+								cursor pointer
+							.contImg
+								valoresDefault()
+								width 35px
+								height 35px
+								border-radius 50%
+								background-color rgba(black, .5)
+								text-align center
+								flex(flex)
+								flex-flow(row no-wrap)
+								align-items(center)
+								img
+									line-height 40px
+									width 100%
+									min-height 40px
+							p
+								padding 0 5px
+							span
+								color color2
+							span#activo
+								color color1
+				article
+					valoresDefault()
+					height 1000px
+					// background-color red
+					color color black
+					.relleno
+						valoresDefault()
+						width 0px
+						float left
+						background-color rgba(color1, .05)
+						height 100%
+						z-index 100
+						// background-color blue
+	
+	.contenedorLoginRegistro
+		valoresDefault()
+		background-color black
+		flex-flow(column wrap)
+		align-items(center)
+		justify-content(center)
+		// position relative
+		> .contenedorInterior
+			max-width 500px
+			.titulo
+				width 100%
+				padding 20px
+				text-align center
+				h1
+					width 100%
+					flex(flex)
+					flex-flow(row no-wrap)
+					justify-content(center)
+					p#blanco
+						color white
+					p#color
+						color color1
+			
+			.formularios
+				valoresDefault()
+				flex(flex)
+				flex-flow(row no-repeat)
+				form
+					width 100%
+					padding 20px
+					background-color rgba(white, .1)
+					border solid 1px rgba(white, .1)
+					#input
+						valoresDefault()
+						flex(flex)
+						flex-flow(row no-wrap)
+						align-items(stretch)
+						margin-bottom 15px
+						height 40px
+						input
+							padding 10px
+							border none
+							background-color rgba(white, .1)
+							color white
+							font-size 16px
+							width 100%
+							height auto
+							&:focus
+								background-color rgba(white, .25)
+						.icon
+							background-color rgba(color1, .8)
+							height auto
+							padding 10px
+					input[type=button], input[type=submit]
+						width 100%
+						padding 10px
+						border none
+						font-size 18px
+						background-color color1
+						color white
+						&:hover
+							background-color color2
+							cursor pointer
+					
+					#mas
+						valoresDefault()
+						padding 10px 0
+						flex(flex)
+						flex-flow(row-reverse wrap)
+						p
+							color rgba(white, .6)
+							text-align right
+							text-decoration underline
+							max-width 100px
+							&:hover
+								cursor pointer
+								color color2
+				
+				form.registro
+					display none
+					opacity 0
+
+.mensajeInformativo
+	valoresDefault()
+	position fixed
+	top 0
+	left 0
+	z-index 300
+	background-color rgba(color1, 0.5)
+	max-height 40px
+	color white
+	p
+		color rgba(white, .9)
+		width 100%
+		line-height 40px
+		font-size 20px
